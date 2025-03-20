@@ -106,3 +106,4 @@ def train_model(my_nn,X_train,y_train,criteria,optmizer,epochs=3000):
 
 ## RESULT
 
+Successfully executed the code to develop a neural network regression model.
