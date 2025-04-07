@@ -52,10 +52,8 @@ class NeuralNet(nn.Module):
         super().__init__()
         self.n1=nn.Linear(1,10)
         self.n2=nn.Linear(10,20)
-        self.n3=nn.Linear(20,50)
-        self.n4=nn.Linear(50,100)
-        self.n5=nn.Linear(100,150)
-        self.n6=nn.Linear(150,1)
+        self.n3=nn.Linear(20,30)
+        self.n4=nn.Linear(30,1)
         self.relu=nn.ReLU()
         self.history={'loss': []}
     
@@ -63,9 +61,7 @@ class NeuralNet(nn.Module):
         x=self.relu(self.n1(x))
         x=self.relu(self.n2(x))
         x=self.relu(self.n3(x))
-        x=self.relu(self.n4(x))
-        x=self.relu(self.n5(x))
-        x=self.n6(x)
+        x=self.n4(x)
         return x
 
 # Initialize the Model, Loss Function, and Optimizer
